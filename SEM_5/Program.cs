@@ -1,6 +1,6 @@
 ﻿//  Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
 
-
+// Console.Clear();
 
 // int[] CreateRandomArray(int N, int start, int end)
 // {
@@ -16,7 +16,12 @@
 // Console.WriteLine("Введите количество элементов массива: ");
 // int N = Convert.ToInt32(Console.ReadLine());
 
-// int[] myArray = CreateRandomArray(N, 100, 999);
+// Console.WriteLine("Введите диапaзон массива: ");
+
+// int minValue = int.Parse(Console.ReadLine());
+// int maxValue = int.Parse(Console.ReadLine());
+
+// int[] myArray = CreateRandomArray(N, minValue, maxValue);
 
 
 
@@ -65,7 +70,7 @@
 // Console.Clear();
 
 
-// double[] CreateRandomArray(int N, int minValue, int maxValue)
+// double[] CreateRandomDoubleArray(int N, int minValue, int maxValue)
 // {
 //     double[] RandomArray = new double[N];
 //     for (int i = 0; i < N; i++)
@@ -74,12 +79,12 @@
 //     }
 //     return RandomArray;
 // }
+
 // Console.WriteLine("Введите количество элементов массива: ");
-// int N = Convert.ToInt32(Console.ReadLine());
+// int N = Math.Abs(Convert.ToInt32(Console.ReadLine()));
 
-// double[] myArray = CreateRandomArray(N, -100, 100);
-// Console.WriteLine($" [ {String.Join(", ", myArray)} ] ");
-
+// double[] myArray = CreateRandomDoubleArray(N, -1000, 1000);
+// Console.WriteLine($" [ {String.Join("  " , myArray)} ] ");
 
 
 // double max = myArray[0];
@@ -97,7 +102,7 @@
 // }
 
 // double diff = max - min;
-// Console.WriteLine($"разница между максимальным и минимальным элементом массива : {diff}");
+// Console.WriteLine($"разница между максимальным и минимальным элементом массива : {Math.Round(diff,3)}");
 
 
 
